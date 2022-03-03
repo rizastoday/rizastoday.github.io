@@ -25,7 +25,8 @@
   
 </template>
 <script setup>
-import { watch } from 'vue';
+import { themeChange } from 'theme-change'
+import { onMounted, watch } from 'vue';
 import { global } from './functions/global.js'
 import Dot from './components/DotComponent.vue'
 import Footer from './components/FooterComponent.vue'
@@ -33,5 +34,9 @@ import Navbar from './components/NavbarComponent.vue'
 
 watch(() => global.dark, (v, o) => {
   v ? document.querySelector('html').classList.add('dark') : document.querySelector('html').classList.remove('dark')
+})
+onMounted(() => {
+  global.dark ? document.querySelector('html').classList.add('dark') : document.querySelector('html').classList.remove('dark')
+  themeChange(false)
 })
 </script>

@@ -21,11 +21,4 @@ import { themeChange } from 'theme-change'
 import { Icon } from '@iconify/vue'
 import Moon from '@iconify-icons/mdi/weather-night'
 import Sun from '@iconify-icons/mdi/weather-sunny'
-import { onMounted } from 'vue';
-
-onMounted(() => {
-  global.dark ? document.querySelector('html').classList.add('dark') : document.querySelector('html').classList.remove('dark')
-  themeChange(false)
-})
-
 </script>
