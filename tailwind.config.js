@@ -15,10 +15,10 @@ module.exports = {
             transform: "scale(1)"
           },
           "33%": {
-            transform: "scale(1.05)"
+            transform: "scale(1.1)"
           },
           "66%": {
-            transform: "scale(0.9)"
+            transform: "scale(0.8)"
           },
           "100%": {
             transform: "scale(1)"
@@ -32,7 +32,7 @@ module.exports = {
   ],
   daisyui: {
     styled: true,
-    themes: ["dark", "emerald"],
+    themes: ["dark", "light"],
     base: true,
     utils: true,
     logs: true,

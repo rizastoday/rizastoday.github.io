@@ -10,3 +10,10 @@
         animation-delay: 4s
     }
 }
+
+html {
+    scroll-behavior: smooth !important;
+}
+*{
+    transition: all ease-in-out .5s !important;
+}

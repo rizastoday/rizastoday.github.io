@@ -1,75 +1,35 @@
 <template>
-  <div class="h-full lg:px-60 px-7 flex flex-col relative overflow-x-hidden">
-    <div class="lg:w-96 lg:h-96 w-72 h-72 absolute lg:top-10 top-48 left-0 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-red-500 dark:bg-purple-500 animate-blob animation-delay-2000"></div>
-    <div class="lg:w-96 lg:h-96 w-72 h-72 absolute lg:top-0 top-36 lg:left-40 left-40 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-yellow-500 dark:bg-gray-500 animate-blob animation-delay-4000"></div>
+  <div class="h-full lg:px-40 md:px-32 px-7 flex flex-col relative overflow-x-hidden">
+    <div style="width: 35rem; height: 25rem;" class="absolute lg:top-10 top-52 -left-40 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-red-500 dark:bg-purple-500 animate-blob animation-delay-2000"></div>
+    <div style="width: 35rem; height: 25rem;" class="absolute lg:top-0 top-20 lg:left-40 -left-72 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-yellow-500 dark:bg-gray-500 animate-blob animation-delay-4000"></div>
 
     <!-- Navbar -->
-    <div class="navbar py-7 relative">
-      <div class="flex-1 justify-end">
-        <!-- Theme Switch -->
-        <label class="swap swap-rotate">
-          <input data-toggle-theme="emerald" type="checkbox" v-model="dark"/>
-          <Icon :icon="Sun" class="swap-on fill-current w-14 h-14"/>
-          <Icon :icon="Moon" class="swap-off fill-current w-14 h-14"/>
-        </label>
-      </div>
-    </div>
+    <Navbar :dark="dark"/>
 
     <!-- Heading -->
-    <div class="font-sans lg:text-7xl text-4xl lg:font-medium font-semibold my-auto relative">
+    <div class="font-sans lg:text-7xl md:text-5xl text-4xl lg:font-medium font-semibold relative my-auto">
       <p>Hi, I'm Riza. </p>
       <p>I'm a web developer.</p>
       <p class="divider"></p>
     </div>
 
-    <div class="absolute w-full flex bottom-1 right-11">
+    <div class="absolute w-full bottom-1">
       <Dot class="lg:w-96 w-64 ml-auto" :theme="dark ? 'white' : 'black'"/>
     </div>
 
   </div>
-  
+
+
   <!-- Footer -->
-  <div class="lg:px-60 px-7 py-56 flex flex-col relative overflow-x-hidden">
-    <div class="lg:w-96 lg:h-80 w-72 h-60 absolute lg:top-20 top-36 lg:right-40 right-40 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-green-500 dark:bg-gray-500 animate-blob animation-delay-4000"></div>
-    <div class="lg:w-96 lg:h-80 w-72 h-60 absolute lg:top-24 top-48 right-0 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-blue-500 dark:bg-purple-500 animate-blob animation-delay-2000"></div>
-    
-    <p class="font-sans uppercase font-semibold text-center text-3xl relative"> find me </p>
-    <div class="flex flex-row justify-around w-2/12 mx-auto relative">
-      <button class="btn btn-ghost btn-circle h-14 w-14 hover:text-red-700" @click.prevent="gmailAction">
-        <Icon :icon="GMail" class="h-7 w-7 " />
-      </button>
-      <button class="btn btn-ghost btn-circle h-14 w-14 hover:text-gray-800" @click.prevent="githubAction">
-        <Icon :icon="Github" class="h-7 w-7 " />
-      </button>
-      <button class="btn btn-ghost btn-circle h-14 w-14 hover:text-blue-800" @click.prevent="linkedInAction">
-        <Icon :icon="LinkedIn" class="h-7 w-7 " />
-      </button>
-      <button class="btn btn-ghost btn-circle h-14 w-14 hover:text-red-700" @click.prevent="instagramAction">
-        <Icon :icon="Instagram" class="h-7 w-7 " />
-      </button>
-    </div>
-
-    <div class="absolute w-full flex bottom-1 left-11">
-      <Dot class="lg:w-96 w-64 mr-auto" :theme="dark ? 'white' : 'black'"/>
-    </div>
-    
-  </div>
-
-
+  <Footer :dark="dark" />
   
-
 </template>
 <script setup>
 import { themeChange } from 'theme-change'
 import { onMounted, ref, watch } from 'vue';
-import { Icon } from '@iconify/vue'
-import Instagram from '@iconify-icons/mdi/instagram'
-import Github from '@iconify-icons/mdi/github'
-import LinkedIn from '@iconify-icons/mdi/linkedin'
-import GMail from '@iconify-icons/mdi/gmail'
-import Moon from '@iconify-icons/mdi/weather-night'
-import Sun from '@iconify-icons/mdi/weather-sunny'
 import Dot from './components/DotComponent.vue'
+import Footer from './components/FooterComponent.vue'
+import Navbar from './components/NavbarComponent.vue'
 
 let dark = ref( localStorage.getItem('theme') ? false : true )
 watch(() => dark.value, (v, o) => {
@@ -80,8 +40,4 @@ onMounted(() => {
   themeChange(false)
 })
 
-const gmailAction = _ => location.href = 'mailto:rizaaffandi45@gmail.com'
-const githubAction = _ => location.href = 'https://github.com/rizastoday/'
-const instagramAction = _ => location.href = 'https://www.instagram.com/rizaaf__'
-const linkedInAction = _ => location.href = 'https://www.linkedin.com/in/rzstdy/'
 </script>
