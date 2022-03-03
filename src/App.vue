@@ -4,7 +4,7 @@
     <div style="width: 35rem; height: 25rem;" class="absolute lg:top-0 top-20 lg:left-40 -left-72 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-yellow-500 dark:bg-gray-500 animate-blob animation-delay-4000"></div>
 
     <!-- Navbar -->
-    <Navbar :dark="dark"/>
+    <Navbar/>
 
     <!-- Heading -->
     <div class="font-sans lg:text-7xl md:text-5xl text-4xl lg:font-medium font-semibold relative my-auto">
@@ -14,30 +14,24 @@
     </div>
 
     <div class="absolute w-full bottom-1">
-      <Dot class="lg:w-96 w-64 ml-auto" :theme="dark ? 'white' : 'black'"/>
+      <Dot class="lg:w-96 w-64 ml-auto" :theme="global.dark ? 'white' : 'black'"/>
     </div>
 
   </div>
 
 
   <!-- Footer -->
-  <Footer :dark="dark" />
+  <Footer :dark="global.dark" />
   
 </template>
 <script setup>
-import { themeChange } from 'theme-change'
-import { onMounted, ref, watch } from 'vue';
+import { watch } from 'vue';
+import { global } from './functions/global.js'
 import Dot from './components/DotComponent.vue'
 import Footer from './components/FooterComponent.vue'
 import Navbar from './components/NavbarComponent.vue'
 
-let dark = ref( localStorage.getItem('theme') ? false : true )
-watch(() => dark.value, (v, o) => {
+watch(() => global.dark, (v, o) => {
   v ? document.querySelector('html').classList.add('dark') : document.querySelector('html').classList.remove('dark')
 })
-onMounted(() => {
-  dark.value ? document.querySelector('html').classList.add('dark') : document.querySelector('html').classList.remove('dark')
-  themeChange(false)
-})
-
 </script>
