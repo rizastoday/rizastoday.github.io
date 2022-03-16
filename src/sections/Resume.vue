@@ -12,7 +12,7 @@
       </div> -->
       <div class="lg:w-3/4 w-full mx-auto flex flex-col">
         <span class="lg:text-2xl text-xl px-0 font-bold mb-4">Education</span>
-        <div class="card w-full bg-base-200 hover:shadow-xl transition-all flex flex-row my-2">
+        <div class="card w-full bg-gray-200 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
           <div class="px-10 py-8 flex">
             <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
               <Icon :icon="School" class="h-10 w-10 m-auto"/>
@@ -27,7 +27,7 @@
 
         
         <span class="lg:text-2xl text-xl px-0 font-bold my-4">Experiences</span>
-        <div class="card w-full bg-base-200 hover:shadow-xl transition-all flex flex-row my-2">
+        <div class="card w-full bg-gray-200 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
           <div class="px-10 py-8 flex">
             <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
               <Icon :icon="Work" class="h-10 w-10 m-auto"/>
@@ -39,7 +39,7 @@
             <p>Software Engineering Internship</p>
           </div>
         </div>
-        <div class="card w-full bg-base-200 hover:shadow-xl transition-all flex flex-row my-2">
+        <div class="card w-full bg-gray-200 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
           <div class="px-10 py-8 flex">
             <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
               <Icon :icon="Work" class="h-10 w-10 m-auto"/>
@@ -75,7 +75,7 @@
         
         <span class="lg:text-2xl text-xl px-0 font-bold my-4 capitalize">curriculum vitae</span>
         <div class="my-2 w-full">
-          <button class="btn btn-primary btn-accent" @click="downloadCV">
+          <button class="btn btn-accent dark:btn-primary" @click="downloadCV">
               <Icon :icon="PDF" class="h-5 w-5 m-auto mr-1"/>
             <span>get PDF</span>
           </button>

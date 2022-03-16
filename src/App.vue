@@ -9,14 +9,14 @@
   <!-- <Abilities/> -->
 
   <!-- about -->
-  <About/>
+  <About class="dark:bg-gray-900"/>
 
 
   <!-- resume -->
-  <Resume/>
+  <Resume class="dark:bg-gray-900"/>
 
   <!-- Footer -->
-  <Footer :dark="global.dark" />
+  <Footer :dark="global.dark" class="dark:bg-gray-900" />
   
 
   <button class="btn btn-accent h-16 w-16 rounded-full fixed right-3 bottom-3 flex" @click="scrollTop" v-if="topHeight > 400">
