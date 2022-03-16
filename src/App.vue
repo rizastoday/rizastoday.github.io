@@ -6,7 +6,7 @@
   <Hero/>
 
   <!-- abilities -->
-  <Abilities/>
+  <!-- <Abilities/> -->
 
   <!-- about -->
   <About/>
@@ -32,7 +32,7 @@ import Navbar from './components/NavbarComponent.vue'
 import { Icon } from '@iconify/vue'
 import Up from '@iconify-icons/mdi/chevron-up'
 import Hero from './sections/Hero.vue';
-import Abilities from './sections/Abilities.vue'
+// import Abilities from './sections/Abilities.vue'
 import About from './sections/About.vue';
 import Resume from './sections/Resume.vue';
 

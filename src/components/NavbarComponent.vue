@@ -2,7 +2,7 @@
     <div class="navbar py-7 fixed w-full z-10  lg:px-40 md:px-32 px-7 shadow-none">
       <div class="flex-1">
         <ul class="menu menu-horizontal p-0 uppercase font-bold text-xs lg:text-lg">
-          <li><a @click.prevent="scrollTo('abilities')">abilities</a></li>
+          <!-- <li><a @click.prevent="scrollTo('abilities')">abilities</a></li> -->
           <li><a @click.prevent="scrollTo('about')">about</a></li>
           <li><a @click.prevent="scrollTo('resume')">resume</a></li>
           <li><a @click.prevent="scrollTo('footer')">contact</a></li>
@@ -27,22 +27,22 @@ import Sun from '@iconify-icons/mdi/weather-sunny'
 
 const scrollTo = (dom) => {
   let heroHeight = document.querySelector('#hero').offsetHeight;
-  let abilitiesHeight = document.querySelector('#abilities').offsetHeight;
+  // let abilitiesHeight = document.querySelector('#abilities').offsetHeight;
   let aboutHeight = document.querySelector('#about').offsetHeight;
   let resumeHeight = document.querySelector('#resume').offsetHeight;
   
   switch (dom) {
-    case 'abilities':
+    // case 'abilities':
+    //   window.scrollTo(0, heroHeight)
+    //   break;
+    case 'about':
       window.scrollTo(0, heroHeight)
       break;
-    case 'about':
-      window.scrollTo(0, heroHeight + abilitiesHeight)
-      break;
     case 'resume':
-      window.scrollTo(0, heroHeight + abilitiesHeight + aboutHeight)
+      window.scrollTo(0, heroHeight + aboutHeight)
       break;
     case 'footer':
-      window.scrollTo(0, heroHeight + abilitiesHeight + aboutHeight + resumeHeight)
+      window.scrollTo(0, heroHeight + aboutHeight + resumeHeight)
       break;
   
     default:
