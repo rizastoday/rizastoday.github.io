@@ -111,6 +111,6 @@ const project = [
 ]
 
 const downloadCV = () => {
-  window.open('../../public/Riza Afandi - CV.pdf')
+  window.open('./Riza Afandi - CV.pdf')
 }
 </script>
