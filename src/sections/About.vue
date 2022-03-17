@@ -5,25 +5,25 @@
       <div class="font-sans relative my-auto lg:font-medium font-semibold flex flex-col">
         <span class="lg:text-5xl md:text-4xl text-3xl px-0 font-bold">About Me</span>
         <p class="divider"></p>
-        <span class="lg:text-xl md:text-lg px-0 font-normal text-slate-500 dark:text-slate-400">
+        <span class="lg:text-xl md:text-lg px-0 font-normal text-slate-500 dark:text-slate-400 text-justify lg:text-left">
           {{ profil }}
         </span>
         <table class="capitalize text-left mt-10">
           <tr>
-            <th>name</th>
-            <td class="text-slate-500 dark:text-slate-400">riza afandi</td>
+            <th class="w-2/6">name</th>
+            <td class="w-4/6 text-slate-500 dark:text-slate-400">riza afandi</td>
           </tr>
           <tr>
-            <th>Date of birth</th>
-            <td class="text-slate-500 dark:text-slate-400">July 24, 2000</td>
+            <th class="w-2/6">Date of birth</th>
+            <td class="w-4/6 text-slate-500 dark:text-slate-400">July 24, 2000</td>
           </tr>
           <tr>
-            <th>Address</th>
-            <td class="text-slate-500 dark:text-slate-400">Purbalingga, Central Java, Indonesia</td>
+            <th class="w-2/6">Address</th>
+            <td class="w-4/6 text-slate-500 dark:text-slate-400">Purbalingga, Central Java, Indonesia</td>
           </tr>
           <tr>
-            <th>E-Mail</th>
-            <td class="text-slate-500 dark:text-slate-400 lowercase">rizaaffandi45@gmail.com</td>
+            <th class="w-2/6">E-Mail</th>
+            <td class="w-4/6 text-slate-500 dark:text-slate-400 lowercase">rizaaffandi45@gmail.com</td>
           </tr>
         </table>
       </div>

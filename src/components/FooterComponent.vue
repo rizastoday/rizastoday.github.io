@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center relative py-72 overflow-x-hidden" id="footer">
-    <div class="lg:w-96 lg:h-80 w-72 h-60 absolute lg:top-20 top-36 lg:right-40 right-40 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-green-500 dark:bg-gray-500 animate-blob animation-delay-4000"></div>
-    <div class="lg:w-96 lg:h-80 w-72 h-60 absolute lg:top-24 top-48 right-0 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-blue-500 dark:bg-purple-500 animate-blob animation-delay-2000"></div>
+    <div class="lg:w-96 lg:h-80 w-72 h-60 absolute lg:top-20 top-36 lg:right-40 right-40 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-accent dark:bg-purple-500 animate-blob animation-delay-4000"></div>
+    <div class="lg:w-96 lg:h-80 w-72 h-60 absolute lg:top-24 top-48 right-0 rounded-full mix-blend-multiply filter blur-2xl opacity-70 bg-primary dark:bg-cyan-500 animate-blob animation-delay-2000"></div>
     
     <p class="font-sans uppercase font-semibold text-center text-2xl relative"> find me </p>
     <div class="flex flex-row justify-around w-2/12 mx-auto relative">
@@ -9,6 +9,10 @@
         <Icon :icon="item.icon" class="h-7 w-7 " />
       </button>
     </div>
+    <p class="font-sans lg:text-slate-400 text-gray-900 text-sm capitalize text-center relative flex flex-row mx-auto justify-center items-center"> 
+      <span>Copyright &copy; 2022 All rights reserved | Purely crafted by me  </span>
+      <Icon :icon="Love" class="h-5 w-5 ml-2" />
+    </p>
 
     <div class="absolute w-full bottom-1">
       <Dot class="lg:w-96 w-64 mr-auto" :theme="dark ? 'white' : 'black'"/>
@@ -22,6 +26,7 @@ import Instagram from '@iconify-icons/mdi/instagram'
 import Github from '@iconify-icons/mdi/github'
 import LinkedIn from '@iconify-icons/mdi/linkedin'
 import GMail from '@iconify-icons/mdi/gmail'
+import Love from '@iconify-icons/mdi/heart-outline'
 
 defineProps({
     dark: {
@@ -43,7 +48,7 @@ const items = [
   },
   {
     name: 'github',
-    class: 'hover:text-gray-700',
+    class: 'hover:text-gray-900',
     method: githubAction,
     icon: Github
   },

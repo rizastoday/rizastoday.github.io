@@ -3,54 +3,24 @@
     <span class="lg:text-5xl md:text-4xl text-3xl px-0 font-bold text-center">Resume</span>
     <p class="divider"></p>
     <div class="flex lg:flex-row flex-col w-full">
-      <!-- <div class="lg:w-1/4 w-full lg:block">
-        <ul class="menu menu-compact static top-64">
-          <li class="hover-bordered"><a>Education</a></li>
-          <li class="hover-bordered"><a>Experiences</a></li>
-          <li class="hover-bordered"><a>Skills</a></li>
-        </ul>
-      </div> -->
-      <div class="lg:w-3/4 w-full mx-auto flex flex-col">
-        <span class="lg:text-2xl text-xl px-0 font-bold mb-4">Education</span>
-        <div class="card w-full bg-gray-200 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
-          <div class="px-10 py-8 flex">
-            <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
-              <Icon :icon="School" class="h-10 w-10 m-auto"/>
-            </div>
-          </div>
-          <div class="card-body pl-0">
-            <p>2016-2019</p>
-            <h2 class="card-title">State Vocational High School 1 Purbalingga</h2>
-            <p>Software Engineering (RPL) Departement</p>
-          </div>
-        </div>
 
-        
-        <span class="lg:text-2xl text-xl px-0 font-bold my-4">Experiences</span>
-        <div class="card w-full bg-gray-200 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
-          <div class="px-10 py-8 flex">
-            <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
-              <Icon :icon="Work" class="h-10 w-10 m-auto"/>
+
+      <div class="lg:w-3/4 w-full mx-auto flex flex-col">
+        <template v-for="item in resume">
+          <span class="lg:text-2xl text-xl px-0 font-bold mb-4 capitalize" v-text="item.title"></span>
+          <div v-for="child in item.content" class="card w-full bg-gray-200 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
+            <div class="px-10 py-8 lg:flex hidden">
+              <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
+                <Icon :icon="item.icon" class="h-10 w-10 m-auto"/>
+              </div>
+            </div>
+            <div class="card-body px-10 lg:px-0">
+              <p class="dark:text-slate-400 text-gray-800" v-text="child.year"></p>
+              <h2 class="card-title capitalize" v-text="child.title"></h2>
+              <p class="dark:text-slate-400 text-gray-800 capitalize" v-text="child.desc"></p>
             </div>
           </div>
-          <div class="card-body pl-0">
-            <p>2017-2018</p>
-            <h2 class="card-title">Nocola IoT Solution</h2>
-            <p>Software Engineering Internship</p>
-          </div>
-        </div>
-        <div class="card w-full bg-gray-200 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
-          <div class="px-10 py-8 flex">
-            <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
-              <Icon :icon="Work" class="h-10 w-10 m-auto"/>
-            </div>
-          </div>
-          <div class="card-body pl-0">
-            <p>2019-Present</p>
-            <h2 class="card-title">Nocola IoT Solution</h2>
-            <p>Fulltime Fullstack Web Developer</p>
-          </div>
-        </div>
+        </template>
 
         
         <span class="lg:text-2xl text-xl px-0 font-bold my-4 capitalize">Skills</span>
@@ -75,7 +45,7 @@
         
         <span class="lg:text-2xl text-xl px-0 font-bold my-4 capitalize">curriculum vitae</span>
         <div class="my-2 w-full">
-          <button class="btn btn-accent dark:btn-primary" @click="downloadCV">
+          <button class="btn btn-accent dark:bg-gradient-to-br dark:from-primary dark:to-accent dark:border-none" @click="downloadCV">
               <Icon :icon="PDF" class="h-5 w-5 m-auto mr-1"/>
             <span>get PDF</span>
           </button>
@@ -91,6 +61,36 @@ import { Icon } from '@iconify/vue'
 import School from '@iconify-icons/mdi/school-outline'
 import Work from '@iconify-icons/mdi/work-outline'
 import PDF from '@iconify-icons/mdi/file-pdf'
+
+const resume = [
+  {
+    title: 'education',
+    icon: School,
+    content: [
+      {
+        year: '2016-2019',
+        title: 'state vocational high school 1 purbalingga',
+        desc: 'software engineering (RPL) departemen'
+      }
+    ]
+  },
+  {
+    title: 'experiences',
+    icon: Work,
+    content: [
+      {
+        year: '2017-2018',
+        title: 'nocola IoT solution',
+        desc: 'software engineering internship'
+      },
+      {
+        year: '2019-present',
+        title: 'nocola IoT solution',
+        desc: 'fulltime fullstack web developer'
+      }
+    ]
+  }
+]
 
 const skills = [
   'adaptability & organizational',
@@ -109,6 +109,7 @@ const project = [
   'application management system', 
   'IoT smart monitoring system'
 ]
+
 
 const downloadCV = () => {
   window.open('./Riza Afandi - CV.pdf')

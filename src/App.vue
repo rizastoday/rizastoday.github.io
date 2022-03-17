@@ -19,9 +19,7 @@
   <Footer :dark="global.dark" class="dark:bg-gray-900" />
   
 
-  <button class="btn btn-accent h-16 w-16 rounded-full fixed right-3 bottom-3 flex" @click="scrollTop" v-if="topHeight > 400">
-    <Icon :icon="Up" class="h-14 w-14 mx-auto" />
-  </button>
+  <Icon :icon="Up" class="h-20 w-20 mx-auto fixed right-3 bottom-3 cursor-pointer dark:text-accent" @click="scrollTop" v-if="topHeight > 400" />
 </template>
 <script setup>
 import { themeChange } from 'theme-change'

@@ -5,12 +5,12 @@
 
     <!-- Heading -->
     <div class="font-sans relative my-auto lg:font-medium font-semibold flex flex-col">
-      <span class="uppercase text-xl px-0 text-slate-400">hey! i  am</span>
+      <span class="uppercase text-xl px-0 text-slate-900">hey! i  am</span>
       <span class="lg:text-8xl md:text-7xl text-6xl px-0 font-bold dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-l dark:from-primary dark:to-accent">
         Riza Afandi
       </span>
       <p class="divider"></p>
-      <span class="lg:text-4xl md:text-3xl text-xl px-0 text-primary dark:text-slate-400 font-normal">I'm a Web Developer</span>
+      <span class="lg:text-4xl md:text-3xl text-xl px-0 lg:text-accent text-slate-900 dark:text-slate-400 font-normal">I'm a Web Developer</span>
     </div>
 
     <div class="absolute w-full bottom-1">
