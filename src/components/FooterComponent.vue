@@ -9,7 +9,7 @@
         <Icon :icon="item.icon" class="h-7 w-7 " />
       </button>
     </div>
-    <p class="font-sans lg:text-slate-400 dark:text-slate-400 text-gray-900 text-sm capitalize text-center relative flex flex-row mx-auto justify-center items-center"> 
+    <p class="font-sans lg:text-slate-500 dark:text-slate-400 text-gray-900 text-sm capitalize text-center relative flex flex-row mx-auto justify-center items-center"> 
       <span>Copyright &copy; 2022 All rights reserved | Purely crafted by me  </span>
       <Icon :icon="Love" class="h-5 w-5 ml-2" />
     </p>
