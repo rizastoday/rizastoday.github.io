@@ -40,7 +40,7 @@ watch(() => global.dark, (v, o) => {
 
 const scrollTop = () => window.scrollTo(0,0)
 const topHeight = ref()
-let navbarClass = ref()
+let navbarClass = ref('py-7')
 onMounted(() => {
   global.dark ? document.querySelector('html').classList.add('dark') : document.querySelector('html').classList.remove('dark')
   themeChange(false)
@@ -48,9 +48,9 @@ onMounted(() => {
   window.onscroll = () => {
     topHeight.value = window.scrollY;
     if(window.scrollY > 0){
-      navbarClass.value = 'glass'
+      navbarClass.value = 'glass py-3'
     }else {
-      navbarClass.value = null
+      navbarClass.value = 'py-7'
     }
   }
 })

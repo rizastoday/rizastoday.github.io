@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar py-7 fixed w-full z-10  lg:px-40 md:px-32 px-7 shadow-none">
+    <div class="navbar fixed w-full z-10  lg:px-40 md:px-32 px-7 shadow-none">
       <div class="flex-1">
         <ul class="menu menu-horizontal p-0 uppercase font-bold text-xs lg:text-lg">
           <!-- <li><a @click.prevent="scrollTo('abilities')">abilities</a></li> -->
@@ -10,10 +10,12 @@
       </div>
       <div class="flex-none">
         <!-- Theme Switch -->
-        <label class="swap swap-rotate">
+        <label class="swap">
           <input data-toggle-theme="light" type="checkbox" v-model="global.dark"/>
-          <Icon :icon="Sun" class="swap-on fill-current w-14 h-14"/>
-          <Icon :icon="Moon" class="swap-off fill-current w-14 h-14"/>
+          <div class="swap-on fill-current w-14 h-14 text-5xl">🌝</div>
+          <div class="swap-off fill-current w-14 h-14 text-5xl">🌚</div>
+          <!-- <Icon :icon="Sun" class="swap-on fill-current w-14 h-14"/>
+          <Icon :icon="Moon" class="swap-off fill-current w-14 h-14"/> -->
         </label>
       </div>
     </div>
@@ -32,9 +34,6 @@ const scrollTo = (dom) => {
   let resumeHeight = document.querySelector('#resume').offsetHeight;
   
   switch (dom) {
-    // case 'abilities':
-    //   window.scrollTo(0, heroHeight)
-    //   break;
     case 'about':
       window.scrollTo(0, heroHeight)
       break;
