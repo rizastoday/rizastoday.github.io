@@ -10,13 +10,8 @@
       </div>
       <div class="flex-none">
         <!-- Theme Switch -->
-        <label class="swap">
-          <input data-toggle-theme="light" type="checkbox" v-model="global.dark"/>
-          <div class="swap-on fill-current w-14 h-14 text-5xl">🌝</div>
-          <div class="swap-off fill-current w-14 h-14 text-5xl">🌚</div>
-          <!-- <Icon :icon="Sun" class="swap-on fill-current w-14 h-14"/>
-          <Icon :icon="Moon" class="swap-off fill-current w-14 h-14"/> -->
-        </label>
+
+        <input data-toggle-theme="light"  type="checkbox" class="toggle toggle-accent" v-model="global.dark">
       </div>
     </div>
 </template>

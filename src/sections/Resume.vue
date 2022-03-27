@@ -8,7 +8,7 @@
       <div class="lg:w-3/4 w-full mx-auto flex flex-col">
         <template v-for="item in resume">
           <span class="lg:text-2xl text-xl px-0 font-bold mb-4 capitalize" v-text="item.title"></span>
-          <div v-for="child in item.content" class="card w-full bg-gray-100 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
+          <div v-for="child in item.content" class="card w-full bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition-all flex flex-row my-2">
             <div class="px-10 py-8 lg:flex hidden">
               <div class="dark:bg-base-300 bg-base-300 h-14 w-14 rounded-full mx-auto flex">
                 <Icon :icon="item.icon" class="h-10 w-10 m-auto"/>
@@ -45,7 +45,7 @@
         
         <span class="lg:text-2xl text-xl px-0 font-bold my-4 capitalize">curriculum vitae</span>
         <div class="my-2 w-full">
-          <button class="btn btn-accent dark:bg-gradient-to-br dark:from-primary dark:to-accent dark:border-none" @click="downloadCV">
+          <button class="btn btn-accent btn-sm dark:to-accent dark:border-none" @click="downloadCV">
               <Icon :icon="PDF" class="h-5 w-5 m-auto mr-1"/>
             <span>get PDF</span>
           </button>
