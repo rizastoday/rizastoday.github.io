@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="lg:w-2/4 lg:visible invisible px-20 lg:flex justify-center items-center">
-      <div class="dark:bg-base-300 bg-gray-200 w-full h-full -translate-x-8 -translate-y-8 rounded-tl-xl rounded-tr-xl rounded-bl-xl" style="border-bottom-right-radius: 200px;">
+      <div class="dark:bg-base-300 bg-gray-200 w-full h-full translate-x-8 translate-y-8 rounded-tl-xl rounded-tr-xl rounded-bl-xl" style="border-bottom-right-radius: 200px;">
         <div class="border-accent border-8 w-full h-full translate-x-8 translate-y-8 flex rounded-tl-xl rounded-tr-xl rounded-bl-xl" style="border-bottom-right-radius: 200px;">
         </div>
       </div>

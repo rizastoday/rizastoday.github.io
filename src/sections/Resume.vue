@@ -33,7 +33,7 @@
           </div>
         </div>
         
-        <span class="lg:text-2xl text-xl px-0 font-bold my-4 capitalize">Projects</span>
+        <!-- <span class="lg:text-2xl text-xl px-0 font-bold my-4 capitalize">Projects</span>
         <div class="my-2 w-full flex flex-col">
           <div class="form-control flex flex-row items-center" v-for="item in project">
             <input type="radio" class="radio checked:bg-primary mr-2" :checked="true" disabled>
@@ -41,7 +41,7 @@
               <span class="label-text capitalize" v-text="item"></span> 
             </label>
           </div>
-        </div>
+        </div> -->
         
         <span class="lg:text-2xl text-xl px-0 font-bold my-4 capitalize">curriculum vitae</span>
         <div class="my-2 w-full">
